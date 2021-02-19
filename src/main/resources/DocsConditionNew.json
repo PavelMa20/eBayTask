@@ -1,0 +1,88 @@
+{
+  "docList": [
+    {
+      "product": {
+        "epid": 1123456,
+        "totalActiveQuantity": 8,
+        "totalActiveSellers": 2,
+        "contextData": {
+          "contextAsSite": true,
+          "contextAsSeller": true,
+          "contextCondition": "NEW"
+        }
+      },
+      "items": [
+        {
+          "accountManager": "Nahom"
+        },
+        {
+          "accountManager": "Yael"
+        },
+        {
+          "accountManager": " "
+        },
+        {
+          "accountManager": null
+        }
+      ]
+    },
+    {
+      "product": {
+        "epid": 1134567,
+        "totalActiveQuantity": 4,
+        "totalActiveSellers": 5,
+        "contextData": {
+          "contextAsSite": false,
+          "contextAsSeller": true,
+          "contextCondition": "NEW"
+        }
+      },
+      "items": [
+        {
+          "accountManager": "Nahom"
+        },
+        {
+          "accountManager": "Yosi"
+        },
+        {
+          "accountManager": "Yael"
+        },
+        {
+          "accountManager": "Rahel"
+        },
+        {
+          "accountManager": "David"
+        },
+        {
+          "accountManager": " "
+        },
+        {
+          "accountManager": null
+        }
+      ]
+    },
+    {
+      "product": {
+        "epid": 1145678,
+        "totalActiveQuantity": 4,
+        "totalActiveSellers": 1,
+        "contextData": {
+          "contextAsSite": false,
+          "contextAsSeller": true,
+          "contextCondition": "NEW"
+        }
+      },
+      "items": [
+        {
+          "accountManager": "Nahom"
+        },
+        {
+          "accountManager": " "
+        },
+        {
+          "accountManager": null
+        }
+      ]
+    }
+  ]
+}
