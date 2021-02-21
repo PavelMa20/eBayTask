@@ -2,16 +2,14 @@ package com.example.eBayTask.data;
 
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
+
 import java.util.List;
 
 @Component
-public class Root implements Serializable {
+public class Root  {
 
-    public List<DocList> list;
+    private List<DocList> list;
 
-    public Root() {
-    }
 
     public List<DocList> getList() {
         return list;

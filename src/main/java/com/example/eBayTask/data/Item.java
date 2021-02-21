@@ -1,16 +1,21 @@
 package com.example.eBayTask.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
 
 
 @Component
-public class Item implements Serializable {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Item {
 
     public String accountManager;
 
     public Item() {
+    }
+
+    public Item(String accountManager) {
+        this.accountManager = accountManager;
     }
 
     public String getAccountManager() {

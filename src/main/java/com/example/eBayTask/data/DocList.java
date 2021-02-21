@@ -1,19 +1,25 @@
 package com.example.eBayTask.data;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Component
-public class DocList implements Serializable {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class DocList {
 
-    public Product product;
-    public List<Item> list;
+    private Product product;
+    private List<Item> list;
 
 
     public DocList() {
+    }
+
+    public DocList(Product product, List<Item> list) {
+        this.product = product;
+        this.list = list;
     }
 
     public Product getProduct() {

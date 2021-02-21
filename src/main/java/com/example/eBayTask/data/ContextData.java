@@ -1,17 +1,24 @@
 package com.example.eBayTask.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
 
 @Component
-public class ContextData implements Serializable {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ContextData  {
 
-    public boolean contextAsSite ;
-    public boolean contextAsSeller ;
-    public String contextCondition ;
+    private boolean contextAsSite ;
+    private boolean contextAsSeller ;
+    private String contextCondition ;
 
     public ContextData() {
+    }
+
+    public ContextData(boolean contextAsSite, boolean contextAsSeller, String contextCondition) {
+        this.contextAsSite = contextAsSite;
+        this.contextAsSeller = contextAsSeller;
+        this.contextCondition = contextCondition;
     }
 
     public boolean isContextAsSite() {

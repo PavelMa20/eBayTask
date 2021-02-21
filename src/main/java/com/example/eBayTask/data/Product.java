@@ -1,12 +1,14 @@
 package com.example.eBayTask.data;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
+
 
 @Component
-public class Product implements Serializable {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Product {
 
     private int epid;
     private int totalActiveQuantity;
@@ -14,6 +16,13 @@ public class Product implements Serializable {
     private ContextData contextData;
 
     public Product() {
+    }
+
+    public Product(int epid, int totalActiveQuantity, int totalActiveSellers, ContextData contextData) {
+        this.epid = epid;
+        this.totalActiveQuantity = totalActiveQuantity;
+        this.totalActiveSellers = totalActiveSellers;
+        this.contextData = contextData;
     }
 
     public int getEpid() {
