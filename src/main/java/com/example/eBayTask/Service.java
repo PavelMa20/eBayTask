@@ -5,23 +5,25 @@ import com.example.eBayTask.data.DocList;
 import com.example.eBayTask.data.Item;
 import com.example.eBayTask.data.Product;
 
+import java.util.List;
+
 
 @org.springframework.stereotype.Service
 public class Service {
 
 
-    public DocList[] transform(DocList[] source){
+    public List<DocList> transform(List<DocList> source){
 
         for(DocList src : source){
 
-           Product product =  src.getProduct();
-          int epId = product.getEpId();
+          Product product =  src.getProduct();
+          int epId = product.getEpid();
           if (!(Integer.valueOf(epId)==null)) {
               String idArray = Integer.toString(epId);
               char[] charIdArray = idArray.toCharArray();
               charIdArray[0] = 9;
               charIdArray[1] = 9;
-              product.setEpId(Integer.parseInt(charIdArray.toString()));
+              product.setEpid(Integer.parseInt(charIdArray.toString()));
           }
           if((Integer.valueOf(product.getTotalActiveQuantity()) != null) &&
                   (Integer.valueOf(product.getTotalActiveSellers()) !=null)){
@@ -36,8 +38,9 @@ public class Service {
                   }
               }
           }
-            Item[] items = src.getItems();
-          if (items != null || items[items.length-2].equals(" ") || items[items.length-1].equals(null)){
+            List<Item> items = src.getList();
+
+          if (items != null || (items.get(items.size()-1)).equals(" ") || (items.get(items.size()-2)).equals(null)){
           }
           src.setProduct(product);
 

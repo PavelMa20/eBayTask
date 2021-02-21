@@ -3,10 +3,12 @@ package com.example.eBayTask.data;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class Product {
+import java.io.Serializable;
 
-    private int epId;
+@Component
+public class Product implements Serializable {
+
+    private int epid;
     private int totalActiveQuantity;
     private int totalActiveSellers;
     private ContextData contextData;
@@ -14,12 +16,12 @@ public class Product {
     public Product() {
     }
 
-    public int getEpId() {
-        return epId;
+    public int getEpid() {
+        return epid;
     }
 
-    public void setEpId(int epId) {
-        this.epId = epId;
+    public void setEpid(int epid) {
+        this.epid = epid;
     }
 
     public int getTotalActiveQuantity() {

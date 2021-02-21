@@ -2,12 +2,14 @@ package com.example.eBayTask.data;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class ContextData {
+import java.io.Serializable;
 
-    private boolean contextAsSite ;
-    private boolean contextAsSeller ;
-    private String contextCondition ;
+@Component
+public class ContextData implements Serializable {
+
+    public boolean contextAsSite ;
+    public boolean contextAsSeller ;
+    public String contextCondition ;
 
     public ContextData() {
     }

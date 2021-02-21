@@ -2,14 +2,14 @@ package com.example.eBayTask;
 
 
 import com.example.eBayTask.data.DocList;
+import com.example.eBayTask.data.Root;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -20,13 +20,14 @@ public class Controller {
     Service service;
 
     @PostMapping(value = "/transform", produces = { "application/json" })
-    public ResponseEntity<DocList[]> changeConstruction(@RequestBody String json) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        DocList[] docLists = mapper.readValue(json, DocList[].class);
+    public ResponseEntity<List<DocList>> changeConstruction(@RequestBody Root root) throws JsonProcessingException {
+       // ObjectMapper mapper = new ObjectMapper();
+      //DocList[] docLists = mapper.readValue(json, DocList[].class);
 
-  DocList[] transform =   service.transform(docLists);
 
-        return  ResponseEntity.ok(transform);
+            List<DocList> docList =   service.transform(root.getList());
+
+        return ResponseEntity.ok(docList);
 
     }
 }

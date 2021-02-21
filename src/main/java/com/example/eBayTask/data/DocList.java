@@ -3,11 +3,14 @@ package com.example.eBayTask.data;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class DocList {
+import java.io.Serializable;
+import java.util.List;
 
-    private Product product;
-    private Item[] items;
+@Component
+public class DocList implements Serializable {
+
+    public Product product;
+    public List<Item> list;
 
 
     public DocList() {
@@ -21,11 +24,11 @@ public class DocList {
         this.product = product;
     }
 
-    public Item[] getItems() {
-        return items;
+    public List<Item> getList() {
+        return list;
     }
 
-    public void setItems(Item[] items) {
-        this.items = items;
+    public void setList(List<Item> list) {
+        this.list = list;
     }
 }

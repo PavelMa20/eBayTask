@@ -2,10 +2,13 @@ package com.example.eBayTask.data;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class Item {
+import java.io.Serializable;
 
-    private String accountManager;
+
+@Component
+public class Item implements Serializable {
+
+    public String accountManager;
 
     public Item() {
     }
