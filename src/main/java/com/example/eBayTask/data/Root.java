@@ -8,14 +8,13 @@ import java.util.List;
 @Component
 public class Root  {
 
-    private List<DocList> list;
+   private List<DocList> docList;
 
-
-    public List<DocList> getList() {
-        return list;
+    public List<DocList> getDocList() {
+        return docList;
     }
 
-    public void setList(List<DocList> list) {
-        this.list = list;
+    public void setDocList(List<DocList> docList) {
+        this.docList = docList;
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
 
-    private int epid;
+    private String epid;
     private int totalActiveQuantity;
     private int totalActiveSellers;
     private ContextData contextData;
@@ -18,18 +18,18 @@ public class Product {
     public Product() {
     }
 
-    public Product(int epid, int totalActiveQuantity, int totalActiveSellers, ContextData contextData) {
+    public Product(String epid, int totalActiveQuantity, int totalActiveSellers, ContextData contextData) {
         this.epid = epid;
         this.totalActiveQuantity = totalActiveQuantity;
         this.totalActiveSellers = totalActiveSellers;
         this.contextData = contextData;
     }
 
-    public int getEpid() {
+    public String getEpid() {
         return epid;
     }
 
-    public void setEpid(int epid) {
+    public void setEpid(String epid) {
         this.epid = epid;
     }
 

@@ -11,15 +11,15 @@ import java.util.List;
 public class DocList {
 
     private Product product;
-    private List<Item> list;
+    private List<Item> items;
 
 
     public DocList() {
     }
 
-    public DocList(Product product, List<Item> list) {
+    public DocList(Product product, List<Item> items) {
         this.product = product;
-        this.list = list;
+        this.items = items;
     }
 
     public Product getProduct() {
@@ -30,11 +30,11 @@ public class DocList {
         this.product = product;
     }
 
-    public List<Item> getList() {
-        return list;
+    public List<Item> getItems() {
+        return items;
     }
 
-    public void setList(List<Item> list) {
-        this.list = list;
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 }
